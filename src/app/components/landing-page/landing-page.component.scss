@@ -1,0 +1,55 @@
+.landing-page {
+    height: 100vh;
+    background: url('../../../assets/image/book.jpg') no-repeat center center/cover;
+    color: #fff;
+    position: relative;
+}
+
+.page {
+    height: 100vh;
+}
+
+.blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+#nav {
+    position: relative;
+    z-index: 4;
+}
+
+.herro-text {
+    z-index: 2;
+
+    .header {
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: 1;
+        text-align: center;
+
+        span {
+            font-size: 4rem;
+        }
+    }
+}
+
+.button {
+    border: 1px solid #fff;
+    background: transparent;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #fff;
+    margin-top: 15px;
+    transition: all ease-in-out .3s;
+
+    &:hover {
+        background: #fff;
+        color: #000;
+    }
+}

@@ -3,11 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { NpAuthRoutingModule } from './np-auth-routing.module';
 import { NpAuthComponent } from './components/board/np-auth.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { SigninComponent } from './components/signin/signin.component';
 
 
 @NgModule({
   declarations: [
-    NpAuthComponent
+    NpAuthComponent,
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,21 @@
+.auth-wrapper{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+
+    background: url('../../../../../assets/image/laptop.jpg') no-repeat center center/cover;
+}
+
+.blur-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba($color: #000000, $alpha: 0.5);
+    z-index: 1;
+}
+
+.width {
+    width: 30%;
+}

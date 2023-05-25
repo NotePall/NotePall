@@ -1,1 +1,20 @@
-<p>np-user works!</p>
+<div class="user-wrapper">
+    <div class="sidebar">
+        <div class="sidebar-logo">
+            <!-- <img src="../../../../../assets/image/logo-green.png" height="80" alt=""> -->
+            <div class="logo">Note<span class="text-white">pall</span></div>
+        </div>
+        <div class="flex justify-content-center align-items-center">
+            <hr style="color: #fff; width: 95%">
+        </div>
+        <div class="sidebar-links">
+                <a routerLink="stickynote" class="link" routerLinkActive="selected"><i class="pi pi-book ico me-3"></i>Sticky Notes</a>
+                <a routerLink="note" class="link"  routerLinkActive="selected"><i class="pi pi-file ico me-3"></i>All Notes</a>
+                <a routerLink="favorite" class="link"  routerLinkActive="selected"><i class="pi pi-heart ico me-3"></i>Favorite</a>
+                <a routerLink="categories" class="link"  routerLinkActive="selected"><i class="pi pi-th-large me-3 ico"></i>Categories</a>
+        </div>
+    </div>
+    <div class="user-content">
+        <router-outlet></router-outlet>
+    </div>
+</div>

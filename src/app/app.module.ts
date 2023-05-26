@@ -9,6 +9,8 @@ import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,10 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    ToastModule
+    ToastModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule 
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]

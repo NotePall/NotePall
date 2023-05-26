@@ -7,15 +7,57 @@
     </div>
     <div class="header">Sticky Notes</div>
     <div class="stickynote-content">
+        <!-- sticky note goes here -->
         <div class="stickynotes">
             <div class="stickynote">
-                <div class="sticky-top"></div>
-                <div class="sticky-content"></div>
-                <div class="sticky-footer"></div>
+                <div class="sticky-top">
+                    <!-- heart button -->
+                    <i class="pi pi-heart"></i>
+                </div>
+                <div class="sticky-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aspernatur
+                    magnam non, repudiandae nulla excepturi quasi dolore cupiditate et minus iure?</div>
+                <div class="sticky-footer">
+                    <div class="date">Tue 19</div>
+                    <div class="edit"><i class="pi pi-file-edit"></i></div>
+                </div>
             </div>
+            <div class="stickynote" style="background-color: green;">
+                <div class="sticky-top">
+                    <i class="pi pi-heart"></i>
+                </div>
+                <div class="sticky-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aspernatur
+                    magnam non, repudiandae nulla excepturi quasi dolore cupiditate et minus iure?</div>
+                <div class="sticky-footer">
+                    <div class="date">Tue 19</div>
+                    <div class="edit"><i class="pi pi-file-edit"></i></div>
+                </div>
+            </div>
+            <div class="stickynote" style="background-color: red;">
+                <div class="sticky-top">
+                    <i class="pi pi-heart"></i>
+                </div>
+                <div class="sticky-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aspernatur
+                    magnam non, repudiandae nulla excepturi quasi dolore cupiditate et minus iure?</div>
+                <div class="sticky-footer">
+                    <div class="date">Tue 19</div>
+                    <div class="edit"><i class="pi pi-file-edit"></i></div>
+                </div>
+            </div>
+            <app-stick-note></app-stick-note>
         </div>
-        <div class="add-form-section">
 
+        <!-- sticky notes end here -->
+        <div class="add-form-section">
+            <div class="create-stickynote">Add StickyNote</div>
+            <hr style="padding: 0; margin: 0;">
+            <form class="sticky-form">
+                <div class="textarea">
+                    <label for="text-area">Note Content</label>
+                    <textarea rows="3" cols="30" class="content" pInputTextarea placeholder="Write your thought.."
+                        formControlName="content"></textarea>
+                </div>
+
+            </form>
         </div>
     </div>
 </div>

@@ -4,6 +4,11 @@ export interface User {
     password: string
 }
 
+export interface UserRequest {
+    username: string
+    password: string
+}
+
 export interface UserResponse {
     token: string
     user: {

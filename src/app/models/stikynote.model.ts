@@ -8,7 +8,7 @@ export interface StickyNote {
     updated_at?: string
 }
 
-export interface stickNoteRequest{
+export interface StickyNoteRequest{
     content: string
     color: string
     label: string

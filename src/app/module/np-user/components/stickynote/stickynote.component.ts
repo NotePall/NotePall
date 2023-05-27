@@ -82,5 +82,13 @@ export class StickynoteComponent implements OnInit {
     }
 
     console.log(sticky)
+
+    this.stickyNoteService.createStickyNote(sticky).subscribe({
+      next: res => {
+        console.log(res)
+        // this.stickNotes.push(res);
+        console.log("connection works")
+      }
+    })
   }
 }

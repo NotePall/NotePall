@@ -6,13 +6,12 @@ import { StickyNote } from 'src/app/models/stikynote.model';
   template: `
     <div class="stickynote" style="background-color: red;">
         <div class="sticky-top">
-            <i class="pi pi-heart"></i>
+            <i class="pi pi-heart"  (click)="onLikeClick()"></i>
         </div>
-        <div class="sticky-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aspernatur
-            magnam non, repudiandae nulla excepturi quasi dolore cupiditate et minus iure?</div>
+        <div class="sticky-content">{{stickynote.content}}</div>
         <div class="sticky-footer">
-            <div class="date">Tue 19</div>
-            <div class="edit"><i class="pi pi-file-edit"></i></div>
+            <div class="date">{{stickynote.updated_at}}</div>
+            <div class="edit" (click)="onLikeClick()"><i class="pi pi-file-edit"></i></div>
         </div>
     </div>
   `,

@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Color } from 'src/app/models/color.model';
 import { Label } from 'src/app/models/label.model';
 import { StickyNote } from 'src/app/models/stikynote.model';
+import { StickynoteService } from 'src/app/service/stickynote.service';
 
 @Component({
   selector: 'app-stickynote',
@@ -24,7 +25,8 @@ export class StickynoteComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private stickyNoteService: StickynoteService
   ) { }
 
   ngOnInit(): void {

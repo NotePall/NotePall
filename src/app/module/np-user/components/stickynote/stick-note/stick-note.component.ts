@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { StickyNote } from 'src/app/models/stikynote.model';
 
 @Component({
@@ -21,9 +21,21 @@ import { StickyNote } from 'src/app/models/stikynote.model';
 export class StickNoteComponent implements OnInit {
 
   @Input() stickynote! : StickyNote;
+
+  @Output() editClick: EventEmitter<void> = new EventEmitter()
+  @Output() likeClick: EventEmitter<void> = new EventEmitter()
+  
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onEditClick() {
+    this.editClick.emit()
+  }
+  
+  onLikeClick() {
+    this.likeClick.emit()
   }
 
 }

@@ -43,18 +43,38 @@
                     <div class="edit"><i class="pi pi-file-edit"></i></div>
                 </div>
             </div>
-            <app-stick-note></app-stick-note>
+
+            <!-- manually load the sticky notes -->
+            <app-stick-note *ngFor="let stickynote of stickNotes" [stickynote]="stickynote"
+                (editClick)="onEditStikyNote(stickynote)" (likeClick)="onLikedStikyNote(stickynote)">
+            </app-stick-note>
         </div>
 
         <!-- sticky notes end here -->
         <div class="add-form-section">
             <div class="create-stickynote">Add StickyNote</div>
             <hr style="padding: 0; margin: 0;">
-            <form class="sticky-form">
+            <form class="sticky-form" [formGroup]="stickNoteForm">
                 <div class="textarea">
                     <label for="text-area">Note Content</label>
-                    <textarea rows="3" cols="30" class="content" pInputTextarea placeholder="Write your thought.."
+                    <textarea rows="5" cols="30" class="content" pInputTextarea placeholder="Write your thought.."
                         formControlName="content"></textarea>
+
+                    <div class="input_text mt-2">
+                        <p-dropdown formControlName="color" placeholder="select color" [options]="colors"
+                            optionLabel="name"></p-dropdown>
+                    </div>
+                    <div class="input_text mt-2">
+                        <p-dropdown formControlName="label" placeholder="select label" [options]="labels"
+                            optionLabel="name"></p-dropdown>
+                    </div>
+                    <div class="input_text mt-2">
+                        <p-checkbox formControlName="favorite" [binary]="true" inputId="favorite"></p-checkbox>
+                        <label for="favorite">Favorite</label>
+                    </div>
+                    <div class="buttons mt-3">
+                        <div class="btn btn-primary w-full" (click)="onCreateStickyNote()">Create Note</div>
+                    </div>
                 </div>
 
             </form>

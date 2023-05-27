@@ -33,10 +33,15 @@
               "node_modules/primeng/resources/themes/lara-light-teal/theme.css",
               "node_modules/primeng/resources/primeng.min.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/primeflex/primeflex.css"
+              "node_modules/primeflex/primeflex.css",
+              "node_modules/quill/dist/quill.core.css",
+              "node_modules/quill/dist/quill.bubble.css",
+              "node_modules/quill/dist/quill.snow.css",
+              "node_modules/quill-mention/dist/quill.mention.min.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/quill/dist/quill.min.js"
             ]
           },
           "configurations": {

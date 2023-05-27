@@ -8,6 +8,8 @@ import { ToastModule } from 'primeng/toast'
 import { FormsModule } from '@angular/forms';
 import { CheckboxModule } from 'primeng/checkbox';
 import { EditorModule } from 'primeng/editor';
+import { DialogModule } from 'primeng/dialog';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [],
@@ -20,7 +22,9 @@ import { EditorModule } from 'primeng/editor';
     ToastModule,
     FormsModule,
     CheckboxModule,
-    EditorModule
+    EditorModule,
+    DialogModule,
+    TableModule
   ],
   exports: [
     InputTextareaModule,
@@ -30,7 +34,9 @@ import { EditorModule } from 'primeng/editor';
     ToastModule,
     FormsModule,
     CheckboxModule,
-    EditorModule
+    EditorModule,
+    DialogModule,
+    TableModule
   ]
 })
 export class NpSharedModule { }

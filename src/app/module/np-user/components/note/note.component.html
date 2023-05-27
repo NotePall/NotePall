@@ -1,7 +1,11 @@
 <div class="header shadow-sm sticky-top">
     <div class="text">Notes</div>
-    <button class="button">Create Note</button>
+    <button class="button" (click)="openCreateModal()">Create Note</button>
 </div>
-<div class="table-data">
+<p-dialog header="Create Note" [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
+    
+</p-dialog>
 
+<div class="table-data">
+    
 </div>

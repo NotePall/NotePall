@@ -12,4 +12,12 @@ export class NoteComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  createNote = (): void => {
+
+  }
+
+  openCreateModal = (): void => {
+
+  }
+
 }

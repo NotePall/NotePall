@@ -1,0 +1,19 @@
+.header{
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    .text {
+        font-weight: 800;
+        font-size: 30px;
+    }
+
+    .button {
+        border: none;
+        padding: 11px 10px;
+        border-radius: 5px;
+        background-color: #085e52;
+        color: #fff;
+    }
+}

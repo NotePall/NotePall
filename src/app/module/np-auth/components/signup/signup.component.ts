@@ -44,7 +44,6 @@ export class SignupComponent implements OnInit {
 
     this.authService.register(userData).subscribe({
       next: res => {
-        // call the message service
         addToMessageService(this.messageService, 'success', 'Success', `Registration Successfull`)
       },
       error: err => {

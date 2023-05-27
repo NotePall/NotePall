@@ -4,14 +4,14 @@ import { StickyNote } from 'src/app/models/stikynote.model';
 @Component({
   selector: 'app-stick-note',
   template: `
-    <div class="stickynote" style="background-color: red;">
+    <div class="stickynote" [style]="stickynote.color">
         <div class="sticky-top">
             <i class="pi pi-heart"  (click)="onLikeClick()"></i>
         </div>
         <div class="sticky-content">{{stickynote.content}}</div>
         <div class="sticky-footer">
-            <div class="date">{{stickynote.updated_at}}</div>
-            <div class="edit" (click)="onLikeClick()"><i class="pi pi-file-edit"></i></div>
+            <div class="date">{{stickynote.updated_at | date:'EEE, d'}}</div>
+            <div class="edit" (click)="onEditClick()"><i class="pi pi-file-edit"></i></div>
         </div>
     </div>
   `,

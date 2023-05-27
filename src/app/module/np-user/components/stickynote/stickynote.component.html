@@ -9,41 +9,6 @@
     <div class="stickynote-content">
         <!-- sticky note goes here -->
         <div class="stickynotes">
-            <div class="stickynote">
-                <div class="sticky-top">
-                    <!-- heart button -->
-                    <i class="pi pi-heart"></i>
-                </div>
-                <div class="sticky-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aspernatur
-                    magnam non, repudiandae nulla excepturi quasi dolore cupiditate et minus iure?</div>
-                <div class="sticky-footer">
-                    <div class="date">Tue 19</div>
-                    <div class="edit"><i class="pi pi-file-edit"></i></div>
-                </div>
-            </div>
-            <div class="stickynote" style="background-color: green;">
-                <div class="sticky-top">
-                    <i class="pi pi-heart"></i>
-                </div>
-                <div class="sticky-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aspernatur
-                    magnam non, repudiandae nulla excepturi quasi dolore cupiditate et minus iure?</div>
-                <div class="sticky-footer">
-                    <div class="date">Tue 19</div>
-                    <div class="edit"><i class="pi pi-file-edit"></i></div>
-                </div>
-            </div>
-            <div class="stickynote" style="background-color: red;">
-                <div class="sticky-top">
-                    <i class="pi pi-heart"></i>
-                </div>
-                <div class="sticky-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aspernatur
-                    magnam non, repudiandae nulla excepturi quasi dolore cupiditate et minus iure?</div>
-                <div class="sticky-footer">
-                    <div class="date">Tue 19</div>
-                    <div class="edit"><i class="pi pi-file-edit"></i></div>
-                </div>
-            </div>
-
             <!-- manually load the sticky notes -->
             <app-stick-note *ngFor="let stickynote of stickNotes" [stickynote]="stickynote"
                 (editClick)="onEditStikyNote(stickynote)" (likeClick)="onLikedStikyNote(stickynote)">
@@ -73,7 +38,7 @@
                         <label for="favorite">Favorite</label>
                     </div>
                     <div class="buttons mt-3">
-                        <div class="btn btn-primary w-full" (click)="onCreateStickyNote()">Create Note</div>
+                        <div class="btn btn-primary w-full bg-green" (click)="onCreateStickyNote()">Create Note</div>
                     </div>
                 </div>
 
@@ -81,3 +46,30 @@
         </div>
     </div>
 </div>
+<p-dialog header="Create Note" [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
+    <form class="sticky-form" [formGroup]="updateStckyNoteForm">
+        <div class="textarea">
+            <div class="flex flex-column">
+                <label for="text-area fw-bold">Note Content</label>
+                <textarea rows="5" cols="30" class="content" (resize)="false" [autoResize]="false" pInputTextarea placeholder="Write your thought.."
+                formControlName="content"></textarea>
+            </div>
+            <div class="input_text mt-2">
+                <p-dropdown formControlName="color" placeholder="select color" [options]="colors"
+                    optionLabel="name"></p-dropdown>
+            </div>
+            <div class="input_text mt-2">
+                <p-dropdown formControlName="label" placeholder="select label" [options]="labels"
+                    optionLabel="name"></p-dropdown>
+            </div>
+            <div class="input_text mt-2">
+                <p-checkbox formControlName="favorite" [binary]="true" inputId="favorite"></p-checkbox>
+                <label for="favorite">Favorite</label>
+            </div>
+            <div class="buttons mt-3">
+                <div class="btn btn-primary w-75 bg-green" (click)="onUpdateSickyNote()">Update Note</div>
+                <div class="btn btn-danger w-25" (click)="onDeleteNote()">Delete</div>
+            </div>
+        </div>
+    </form>
+</p-dialog>

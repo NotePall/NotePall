@@ -13,12 +13,12 @@ export class AuthService {
 
   private baseUrl: string = environment.baseUrl;
 
-  private httpOption = {
-    headers: new HttpHeaders({
-      'Content-Type' : 'application/json',
-      'Authorization' : `Bearer ${LocalStorageUtils.readToken()}`
-    })
-  }
+  // private httpOption = {
+  //   headers: new HttpHeaders({
+  //     'Content-Type' : 'application/json',
+  //     'Authorization' : `Bearer ${LocalStorageUtils.readToken()}`
+  //   })
+  // }
 
   constructor(private http: HttpClient) { }
 

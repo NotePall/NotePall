@@ -25,18 +25,18 @@ export class StickynoteService {
   }
 
   updateStickyNote = (stickynote: StickyNoteRequest, id: number):Observable<StickyNote> => {
-    return this.http.post<StickyNote>(`${this.baseUrl}/stickynote/${id}`, stickynote)
+    return this.http.patch<StickyNote>(`${this.baseUrl}/stickynote/${id}/`, stickynote)
   }
 
   deleteStickyNote = (id: number): Observable<BaseResponse> => {
-    return this.http.delete<BaseResponse>(`${this.baseUrl}/stickynote/${id}`, this.httpOption)
+    return this.http.delete<BaseResponse>(`${this.baseUrl}/stickynote/${id}/`, this.httpOption)
   }
 
-  getStickyNote = (): Observable<StickyNote[]> => {
-    return this.http.get<StickyNote[]>(`${this.baseUrl}/srickynote`, this.httpOption)
+  getStickyNotes = (): Observable<StickyNote[]> => {
+    return this.http.get<StickyNote[]>(`${this.baseUrl}/stickynote/`, this.httpOption)
   }
 
   getStickyNoteById = (id: number): Observable<StickyNote> => {
-    return  this.http.get<StickyNote>(`${this.baseUrl}/stickynote/${id}`)
+    return  this.http.get<StickyNote>(`${this.baseUrl}/stickynote/${id}/`)
   }
 }

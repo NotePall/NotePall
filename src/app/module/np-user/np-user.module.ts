@@ -10,6 +10,7 @@ import { FavoriteComponent } from './components/favorite/favorite.component';
 import { NpSharedModule } from '../np-shared/np-shared.module';
 import { NotePreviewComponent } from './components/note-preview/note-preview.component';
 import { StickNoteComponent } from './components/stickynote/stick-note/stick-note.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,7 +26,9 @@ import { StickNoteComponent } from './components/stickynote/stick-note/stick-not
   imports: [
     CommonModule,
     NpUserRoutingModule,
-    NpSharedModule
+    NpSharedModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class NpUserModule { }

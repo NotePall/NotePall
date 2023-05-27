@@ -11,8 +11,9 @@ export module LocalStorageUtils {
         localStorage.setItem(LOCAL_STORAGE_KEY.token, token)
     }
 
-    export const readToken = () => {
-        localStorage.getItem(LOCAL_STORAGE_KEY.token)
+    export const readToken = () : string => {
+        const token = localStorage.getItem(LOCAL_STORAGE_KEY.token)
+        return token ? token : ""
     }
 
     export const deleteToken = () => {
